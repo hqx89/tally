@@ -1,12 +1,13 @@
-const root = process.cwd()
+const path = require('path')
 
 module.exports = {
-  root,
-  // 是否开启 https
-  https: false,
-  // 服务端渲染
-  ssr: false,
-  sourcemap: false,
   port: 8080,
-  esbuildTarget: 'es5',
+  cssPreprocessOptions: {
+    less: {
+      modifyVars: {
+        'white': '#000',
+        hack: `true; @import "${path.resolve(__dirname, 'src/assets/css/myTheme.less')}";`
+      }
+    }
+  }
 }
