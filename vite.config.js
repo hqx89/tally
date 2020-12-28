@@ -1,6 +1,6 @@
 const root = process.cwd()
 
-const viteConfig = {
+module.exports = {
   root,
   alias,
   // 是否开启 https
@@ -11,5 +11,3 @@ const viteConfig = {
   port: 8080,
   esbuildTarget: 'es2020',
 }
-
-export default viteConfig
