@@ -2,7 +2,6 @@ const root = process.cwd()
 
 module.exports = {
   root,
-  alias,
   // 是否开启 https
   https: false,
   // 服务端渲染
