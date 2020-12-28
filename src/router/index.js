@@ -1,3 +1,4 @@
+import { defineAsyncComponent } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Data from '../views/Data.vue'
@@ -17,31 +18,31 @@ const router = createRouter({
     },
     {
       path: '/home',
-      component: Home
+      component: defineAsyncComponent(() => import('../views/Home.vue'))
     },
     {
       path: '/data',
-      component: Data
+      component: defineAsyncComponent(() => import('../views/Data.vue'))
     },
     {
       path: '/user',
-      component: User
+      component: defineAsyncComponent(() => import('../views/User.vue'))
     },
     {
       path: '/login',
-      component: Login
+      component: defineAsyncComponent(() => import('../views/Login.vue'))
     },
     {
       path: '/detail',
-      component: Detail
+      component: defineAsyncComponent(() => import('../views/Detail.vue'))
     },
     {
       path: '/about',
-      component: About
+      component: defineAsyncComponent(() => import('../views/About.vue'))
     },
     {
       path: '/account',
-      component: Account
+      component: defineAsyncComponent(() => import('../views/Account.vue'))
     }
   ]
 })
